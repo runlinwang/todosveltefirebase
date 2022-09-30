@@ -1,39 +1,25 @@
-# create-svelte
+# To Do List in Svelte + Firebase
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+### By RunLin Wang
 
-## Creating a project
+The code was based off of this series of Youtube tutorials: (https://www.youtube.com/playlist?list=PLm_Qt4aKpfKiGbdjaHdOpry6Neza0etxZ)
 
-If you're seeing this, you've probably already done this step. Congrats!
+Documentation on https://firebase.google.com/docs/firestore/quickstart was also used to help connect Firebase to the app in the correct way.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## How to Run
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+This app can be run locally. First, download this repository and navigate to the root director. Next, install dependencies with `npm install`. Then, run `npm run dev` and go to the local port link to view and interact with the website.
 
-## Developing
+## Features and Comments 
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+The basic functionality of adding tasks and checking them / unchecking them is in the application. You can add tasks by clicking the "Add" button or pushing the enter key. You can check and uncheck tasks by clicking the check mark button corresponding to the specific task you want to check.
 
-```bash
-npm run dev
+An additional feature here is the deletion of tasks off of the list. Clicking the x button will delete the app permanently. Another interesting feature that Firebase affords us is the permanent storage of the tasks. If I add tasks to my list and then close the window / terminal and reopen it again later (potentially even on a different machine), then 
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+The primary work that I did / added is all in the `+page.svelte` in `src/routes`. The vast majority of the comments on the code are also in that file.
 
-## Building
+## Reflection
 
-To create a production version of your app:
+Svelte and Firebase is a very powerful combination of tools. The database capabilities of Firebase resemble the capabilities of MongoDB, while the ease of use of Svelte is similar to the way that I would normally integrate React into my websites. This combination of ease of coding and cloud databases is very useful for web apps.
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-# todosveltefirebase
+Additionally, from a technical standpoint, Svelte is a compiler that generates the code at build time, which means that we dont need to include the full framework itself as a hard dependency. This has the added benefit of smaller bundle sizes with optimized code for what you are actually using, since you only need to compile the JS code from the frameworks that you actually need to use.

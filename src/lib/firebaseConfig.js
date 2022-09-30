@@ -1,4 +1,5 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// taken directly from the firebase website
 export const firebaseConfig = {
     apiKey: "AIzaSyDRLMF8k5GDMPf0x6IU9c0o8QiMWxFBjX8",
     authDomain: "todo-runlin.firebaseapp.com",
